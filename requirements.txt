@@ -1,0 +1,6 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Werkzeug==2.3.7
+# Choose a compatible stripe client version. 5.5.0 is available and stable for basic integration.
+stripe==5.5.0
+gunicorn==20.1.0
