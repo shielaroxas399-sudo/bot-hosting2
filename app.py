@@ -32,6 +32,10 @@ db = SQLAlchemy(app)
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+# Create all tables on startup (runs once when app initializes)
+with app.app_context():
+    db.create_all()
+
 # ═══════════════════════════════════════════════════════════════════════
 # DATABASE MODELS
 # ═══════════════════════════════════════════════════════════════════════
